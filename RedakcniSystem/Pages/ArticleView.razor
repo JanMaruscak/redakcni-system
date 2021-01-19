@@ -1,0 +1,20 @@
+﻿@page "/articleview/{id:int}"
+@using RedakcniSystem.Data
+@inject ArticleService ArticleService
+
+<h1>@Article.Title</h1>
+<img src="@Article.ImageUrl" class="img-fluid" alt="Responsive image">
+<p>Written by: @Article.Author</p>
+<p>@Article.Created</p>
+<p>@Article.Content</p>
+@code{
+    [Parameter]
+    public int Id { get; set; }
+
+    public Article Article;
+    protected override void OnInitialized()
+    {
+        Article = ArticleService.GetArticle(Id);
+    }
+
+}

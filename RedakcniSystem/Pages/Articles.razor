@@ -1,0 +1,52 @@
+﻿@page "/"
+@using RedakcniSystem.Data
+@inject ArticleService ArticleService
+@inject NavigationManager NavigationManager;
+
+<h1>Articles</h1>
+<div class="row">
+@foreach (var article in articles)
+{
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="@article.ImageUrl" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">@article.Title</h5>
+          <p class="card-text">@article.Content</p>
+          <AuthorizeView>
+              <Authorized>
+                    <button type="button" class="btn btn-primary" @onclick="() => ViewArticle(article.Id)">View</button>
+                    <button type="button" class="btn btn-primary" @onclick="() => EditArticle(article.Id)">Edit</button>
+                    <button type="button" class="btn btn-primary" @onclick="() => DeleteArticle(article.Id)">Delete</button>
+              </Authorized>
+                <NotAuthorized>
+                    <button type="button" class="btn btn-primary" @onclick="() => ViewArticle(article.Id)">View</button>
+                </NotAuthorized>
+          </AuthorizeView>
+      </div>
+    </div>
+}
+</div>
+
+@code{
+
+    List<Article> articles = new List<Article>();
+
+    protected override void OnInitialized()
+    {
+        articles = ArticleService.GetArticles();
+    }
+
+    public void ViewArticle(int id)
+    {
+        NavigationManager.NavigateTo($"articleview/{id}");
+    }
+    public void EditArticle(int id)
+    {
+        NavigationManager.NavigateTo($"editarticle/{id}");
+    }
+    public void DeleteArticle(int id)
+    {
+        ArticleService.DeleteArticle(id);
+    }
+    
+}

@@ -1,0 +1,39 @@
+﻿@page "/addarticle"
+@using RedakcniSystem.Data
+@inject ArticleService ArticleService
+@inject NavigationManager NavigationManager
+
+<EditForm Model=@Article>
+  <div class="form-group">
+    <label for="Title">Title</label>
+    <InputText @bind-Value=Article.Title class="form-control" id="Title" />
+  </div>
+  <div class="form-group">
+    <label for="Author">Author</label>
+    <InputText @bind-Value=Article.Author class="form-control" id="Author" />
+  </div>
+  <div class="form-group">
+    <label for="Content">Content</label>
+    <InputTextArea @bind-Value=Article.Content class="form-control" id="Content" />
+  </div>
+  <div class="form-group">
+    <label for="ImageUrl">ImageUrl</label>
+    <InputText @bind-Value=Article.ImageUrl class="form-control" id="ImageUrl" />
+  </div>
+  <button type="button" class="btn btn-primary" @onclick="() => CreateArticle()">Add article</button>
+</EditForm>
+
+@code{
+  Article Article = new Article();
+
+    protected override void OnInitialized()
+    {
+        
+    }
+
+  public void CreateArticle()
+  {
+    ArticleService.AddArticle(Article);
+    NavigationManager.NavigateTo("/articles");
+  }
+}

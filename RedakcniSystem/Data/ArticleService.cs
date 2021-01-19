@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace RedakcniSystem.Data
 {
     public class ArticleService
     {
         public ApplicationDbContext DbContext { get; set; }
-
+        public RoleManager<IdentityRole> RoleManager;
         public ArticleService(ApplicationDbContext dbContext)
         {
             DbContext = dbContext;
@@ -14,11 +16,12 @@ namespace RedakcniSystem.Data
 
         public List<Article> GetArticles()
         {
-            return DbContext.Articles.ToList();
+            var articles = DbContext.Articles.Include(a => a.Tags).ToList();
+            return articles;
         }
         public Article GetArticle(int id)
         {
-            return DbContext.Articles.FirstOrDefault((a) => a.Id == id);
+            return DbContext.Articles.Include(a => a.Tags).FirstOrDefault((a) => a.Id == id);
         }
 
         public void EditArticle(Article article)
@@ -37,6 +40,14 @@ namespace RedakcniSystem.Data
         {
             DbContext.Articles.Add(article);
             DbContext.SaveChanges();
+        }
+
+        public List<Article> Search(Search Search)
+        {
+            Search.Content = Search.Content.ToLower();
+            var articles = GetArticles();
+            var result = articles.Where(t => t.Title.ToLower().Contains(Search.Content) || t.ShortText.ToLower().Contains(Search.Content));
+            return result.ToList();
         }
     }
 }

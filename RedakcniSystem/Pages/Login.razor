@@ -1,13 +1,36 @@
 ﻿@page "/login"
+@using Microsoft.AspNetCore.Http
+@using RedakcniSystem.Data
+@inject UsersService UsersService
+
+@inject IHttpContextAccessor IHttp
+
 <AuthorizeView>
     <Authorized>
         <a href="Identity/Account/Manage">Hello, @context.User.Identity.Name!</a>
         <form method="post" action="Identity/Account/LogOut">
             <button type="submit" class="nav-link btn btn-link">Log out</button>
         </form>
+        <button @onclick="() => AddToAdmin()">Add to admin</button>
+        <button @onclick="() => AddToRedactor()">Add to redactor</button>
     </Authorized>
     <NotAuthorized>
         <a href="Identity/Account/Register">Register</a>
         <a href="Identity/Account/Login">Log in</a>
     </NotAuthorized>
 </AuthorizeView>
+@code{
+
+    public void AddToAdmin()
+    {
+        var mail = IHttp.HttpContext.User.Identity.Name;
+        UsersService.AddAdmin(mail);
+    }
+
+    public void AddToRedactor()
+    {
+        var mail = IHttp.HttpContext.User.Identity.Name;
+        UsersService.AddRedactor(mail);
+    }
+
+}

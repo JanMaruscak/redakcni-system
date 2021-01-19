@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace RedakcniSystem.Data
@@ -13,11 +14,11 @@ namespace RedakcniSystem.Data
         public string ImageUrl { get; set; }
         public string Content { get; set; }
         public string ShortText { get; set; }
-        public string Tags { get; set; }
+        public List<Tag> Tags { get; set; }
+        public bool Visible { get; set; }
 
         public Article()
         {
-            
         }
         public Article(string title)
         {

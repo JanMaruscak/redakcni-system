@@ -2,10 +2,20 @@
 @using RedakcniSystem.Data
 @inject ArticleService ArticleService
 
-<h1>@Article.Title</h1>
+<br/>
 <img src="@Article.ImageUrl" class="img-fluid" alt="Responsive image">
-<p>Written by: @Article.Author</p>
-<p>@Article.Created</p>
+<br/>
+<br/>
+<h3>@Article.Title</h3>
+ <p style="margin-bottom: 0">Autor: @Article.Author</p>
+<p><small class="text-muted">@Article.Created.Date.ToString("MMMM dd, yyyy")</small></p>
+<div class="row" style="margin-left: 0">
+    @foreach (var tag in Article.Tags)
+    {
+        <span style="margin-right: 5px; padding: 8px" class="badge badge-secondary">@tag.Content</span>
+    }
+</div>
+<br>
 <p>@Article.Content</p>
 @code{
     [Parameter]

@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RedakcniSystem.Data;
 
 namespace RedakcniSystem.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210119063646_initialRole")]
+    partial class initialRole
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,15 +46,15 @@ namespace RedakcniSystem.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "3c127d8d-c62a-45e4-889d-df3117e7f454",
-                            ConcurrencyStamp = "aa685154-51fe-4f23-ba9e-cbf73bd69761",
+                            Id = "1b568609-f69a-4f40-84ed-dc08648f8be2",
+                            ConcurrencyStamp = "d2a68826-ef8b-4be8-b1e3-bc26e76aed9e",
                             Name = "Redactor",
                             NormalizedName = "REDACTOR"
                         },
                         new
                         {
-                            Id = "4153cf29-4d21-4b59-9948-fe2a2d4849c5",
-                            ConcurrencyStamp = "8c20e163-aad0-4449-aa4d-c29bd8b2bf3d",
+                            Id = "41d04e84-088e-45fa-b05e-8befea7f1a8f",
+                            ConcurrencyStamp = "a1879d91-3bf1-4e73-8bfe-3e0f76dbeb84",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });
@@ -249,34 +251,15 @@ namespace RedakcniSystem.Data.Migrations
                     b.Property<string>("ShortText")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Title")
+                    b.Property<string>("Tags")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("Visible")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Title")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
                     b.ToTable("Articles");
-                });
-
-            modelBuilder.Entity("RedakcniSystem.Data.Tag", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("ArticleId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Content")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ArticleId");
-
-                    b.ToTable("Tag");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -328,18 +311,6 @@ namespace RedakcniSystem.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("RedakcniSystem.Data.Tag", b =>
-                {
-                    b.HasOne("RedakcniSystem.Data.Article", null)
-                        .WithMany("Tags")
-                        .HasForeignKey("ArticleId");
-                });
-
-            modelBuilder.Entity("RedakcniSystem.Data.Article", b =>
-                {
-                    b.Navigation("Tags");
                 });
 #pragma warning restore 612, 618
         }

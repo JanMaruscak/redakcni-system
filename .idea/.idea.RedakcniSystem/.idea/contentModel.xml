@@ -4,9 +4,10 @@
     <e p="C:\dev\RedakcniSystem" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="RedakcniSystem" t="IncludeRecursive">
-        <e p=".gitignore" t="Include" />
         <e p="_Imports.razor" t="Include" />
         <e p="app.db" t="Include" />
+        <e p="app.db-shm" t="Include" />
+        <e p="app.db-wal" t="Include" />
         <e p="App.razor" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
@@ -37,8 +38,18 @@
             <e p="20210118214524_article.Designer.cs" t="Include" />
             <e p="20210118221016_tags.cs" t="Include" />
             <e p="20210118221016_tags.Designer.cs" t="Include" />
+            <e p="20210119063646_initialRole.cs" t="Include" />
+            <e p="20210119063646_initialRole.Designer.cs" t="Include" />
+            <e p="20210119065051_tagClass.cs" t="Include" />
+            <e p="20210119065051_tagClass.Designer.cs" t="Include" />
+            <e p="20210119085115_visibility.cs" t="Include" />
+            <e p="20210119085115_visibility.Designer.cs" t="Include" />
             <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
           </e>
+          <e p="RoleConfiguration.cs" t="Include" />
+          <e p="Search.cs" t="Include" />
+          <e p="Tag.cs" t="Include" />
+          <e p="UsersService.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -51,8 +62,10 @@
         <e p="Pages" t="Include">
           <e p="_Host.cshtml" t="Include" />
           <e p="AddArticle.razor" t="Include" />
+          <e p="Admin.razor" t="Include" />
           <e p="Articles.razor" t="Include" />
           <e p="ArticleView.razor" t="Include" />
+          <e p="Browse.razor" t="Include" />
           <e p="EditArticle.razor" t="Include" />
           <e p="Error.cshtml" t="Include" />
           <e p="Error.cshtml.cs" t="Include" />

@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RedakcniSystem.Data;
 
 namespace RedakcniSystem.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210119065051_tagClass")]
+    partial class tagClass
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,15 +46,15 @@ namespace RedakcniSystem.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "3c127d8d-c62a-45e4-889d-df3117e7f454",
-                            ConcurrencyStamp = "aa685154-51fe-4f23-ba9e-cbf73bd69761",
+                            Id = "1b594d67-b21b-4512-b3a2-eb76cc58faa4",
+                            ConcurrencyStamp = "5c1dd07f-5cc6-40c1-ae63-27a52d7e928e",
                             Name = "Redactor",
                             NormalizedName = "REDACTOR"
                         },
                         new
                         {
-                            Id = "4153cf29-4d21-4b59-9948-fe2a2d4849c5",
-                            ConcurrencyStamp = "8c20e163-aad0-4449-aa4d-c29bd8b2bf3d",
+                            Id = "c04b07ba-e691-4440-810e-51e2ca505a86",
+                            ConcurrencyStamp = "26459bb1-59ec-4845-a7c4-0c79aaf819c7",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });
@@ -251,9 +253,6 @@ namespace RedakcniSystem.Data.Migrations
 
                     b.Property<string>("Title")
                         .HasColumnType("TEXT");
-
-                    b.Property<bool>("Visible")
-                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 

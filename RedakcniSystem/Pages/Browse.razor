@@ -1,12 +1,17 @@
-﻿@page "/"
+﻿@page "/browse"
 @using RedakcniSystem.Data
-@using Microsoft.AspNetCore.Http
-@using System.Security.Claims
 @inject ArticleService ArticleService
 @inject NavigationManager NavigationManager;
-@inject IHttpContextAccessor IHttp
-@inject AuthenticationStateProvider AuthenticationStateProvider
-@inject UsersService UsersService
+@inject UsersService UsersService 
+
+<div style="display: flex; justify-content: center; align-items: center"> 
+    <EditForm class="form-inline my-2 my-lg-0" Model=@Search>
+        <InputText  @bind-Value=Search.Content class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" @onclick="() => Filter()">Search</button>
+    </EditForm>
+</div>
+<br>
+<br>
 
 <div class="card-deck">
     @foreach (var article in articles)
@@ -17,7 +22,7 @@
                 <h5 class="card-title">@article.Title</h5>
                 <p class="card-text">@article.ShortText</p>
                 <p class="card-text"><small class="text-muted">@article.Created.Date.ToString("MMMM dd, yyyy")</small></p>
-              <AuthorizeView>
+              <AuthorizeView Roles="admin">
                   <Authorized>
                         <button type="button" class="btn btn-primary" @onclick="() => ViewArticle(article.Id)">View</button>
                         <button type="button" class="btn btn-secondary" @onclick="() => EditArticle(article.Id)">Edit</button>
@@ -32,43 +37,14 @@
     }
 </div>
 
-@*<h1>Articles</h1>
-<div class="row">
-@foreach (var article in articles)
-{
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="@article.ImageUrl" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">@article.Title</h5>
-          <p class="card-text">@article.Content</p>
-          <AuthorizeView>
-              <Authorized>
-                    <button type="button" class="btn btn-primary" @onclick="() => ViewArticle(article.Id)">View</button>
-                    <button type="button" class="btn btn-primary" @onclick="() => EditArticle(article.Id)">Edit</button>
-                    <button type="button" class="btn btn-primary" @onclick="() => DeleteArticle(article.Id)">Delete</button>
-              </Authorized>
-                <NotAuthorized>
-                    <button type="button" class="btn btn-primary" @onclick="() => ViewArticle(article.Id)">View</button>
-                </NotAuthorized>
-          </AuthorizeView>
-      </div>
-    </div>
-}
-</div>*@
-
 @code{
 
     List<Article> articles = new List<Article>();
+    Search Search = new Search();
 
     protected override void OnInitialized()
     {
         articles = ArticleService.GetArticles();
-        if (IHttp.HttpContext != null && !IHttp.HttpContext.User.Identity.IsAuthenticated)
-        {
-            articles = articles.Where(x => x.Visible == true).ToList();
-        }
-        
-        var lol = AuthenticationStateProvider.GetAuthenticationStateAsync().Result;
     }
 
     public void ViewArticle(int id)
@@ -82,6 +58,11 @@
     public void DeleteArticle(int id)
     {
         ArticleService.DeleteArticle(id);
+    }
+
+    public void Filter()
+    {
+        articles = ArticleService.Search(Search);
     }
     
 }

@@ -3,28 +3,53 @@
 @inject ArticleService ArticleService
 @inject NavigationManager NavigationManager
 
-<EditForm Model=@Article>
-  <div class="form-group">
-    <label for="Title">Title</label>
-    <InputText @bind-Value=Article.Title class="form-control" id="Title" />
-  </div>
-  <div class="form-group">
-    <label for="Author">Author</label>
-    <InputText @bind-Value=Article.Author class="form-control" id="Author" />
-  </div>
-  <div class="form-group">
-    <label for="Content">Content</label>
-    <InputTextArea @bind-Value=Article.Content class="form-control" id="Content" />
-  </div>
-  <div class="form-group">
-    <label for="ImageUrl">ImageUrl</label>
-    <InputText @bind-Value=Article.ImageUrl class="form-control" id="ImageUrl" />
-  </div>
-  <button type="button" class="btn btn-primary" @onclick="() => CreateArticle()">Add article</button>
-</EditForm>
+<AuthorizeView>
+  <Authorized Context="Auth">
+    <EditForm Model=@Article>
+      <div class="form-group">
+        <label for="Title">Title</label>
+        <InputText @bind-Value=Article.Title class="form-control" id="Title"/>
+      </div>
+      <div class="form-group">
+        <label for="Author">Author</label>
+        <InputText @bind-Value=Article.Author class="form-control" id="Author"/>
+      </div>
+      <div class="form-group">
+        <label for="Content">Content</label>
+        <InputTextArea @bind-Value=Article.Content class="form-control" id="Content"/>
+      </div>
+      <div class="form-group">
+          <label for="ShortText">Short text</label>
+          <InputTextArea @bind-Value=Article.ShortText class="form-control" id="ShortText" />
+      </div>
+      <div class="form-group">
+        <label for="ImageUrl">ImageUrl</label>
+        <InputText @bind-Value=Article.ImageUrl class="form-control" id="ImageUrl"/>
+      </div>
+        <div class="form-group">
+            <label for="Tags">Tags</label>
+            @foreach (var tag in Article.Tags)
+            {
+                <InputText @bind-Value=tag.Content class="form-control" id="Tags" />
+                <button type="button" class="btn btn-danger" @onclick="() => Article.Tags.Remove(tag)">Delete tag</button>
+              <br/>
+            }
+            <div class="form-group">
+              <label for="Visibility">Visibility</label>
+              <InputCheckbox @bind-Value=Article.Visible class="form-control" id="Visibility"/>
+            </div>
+            <br/>
+        <button type="button" class="btn btn-secondary" @onclick="() => Article.Tags.Add(new Tag())">Add tag</button>
+        </div>
+          <br/>
+          <br/>
+      <button type="button" class="btn btn-primary" @onclick="() => CreateArticle()">Add article</button>
+    </EditForm>
+  </Authorized>
+</AuthorizeView>
 
 @code{
-  Article Article = new Article();
+  Article Article = new Article() {Tags = new List<Tag>(), Author = "", Content = "", Title = "", ImageUrl = "", ShortText = ""};
 
     protected override void OnInitialized()
     {
@@ -33,6 +58,7 @@
 
   public void CreateArticle()
   {
+    Article.Created = DateTime.Now;
     ArticleService.AddArticle(Article);
     NavigationManager.NavigateTo("/articles");
   }

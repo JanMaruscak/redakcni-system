@@ -1,0 +1,24 @@
+﻿@page "/admin"
+@using RedakcniSystem.Data
+
+<AuthorizeView Roles="admin">
+    <Authorized>
+    You are admin.
+    </Authorized>
+    <NotAuthorized>
+    You are not the admin.
+    </NotAuthorized>
+</AuthorizeView>
+<AuthorizeView Roles="redactor">
+    <Authorized>
+    You are redactor.
+    </Authorized>
+    <NotAuthorized>
+    You are not the redactor.
+    </NotAuthorized>
+</AuthorizeView>
+
+@code{
+
+    
+}

@@ -29,6 +29,9 @@
           <e p="ApplicationDbContext.cs" t="Include" />
           <e p="Article.cs" t="Include" />
           <e p="ArticleService.cs" t="Include" />
+          <e p="Menu.cs" t="Include" />
+          <e p="MenuButton.cs" t="Include" />
+          <e p="MenuService.cs" t="Include" />
           <e p="Migrations" t="Include">
             <e p="00000000000000_CreateIdentitySchema.cs" t="Include" />
             <e p="00000000000000_CreateIdentitySchema.Designer.cs" t="Include" />
@@ -44,8 +47,18 @@
             <e p="20210119065051_tagClass.Designer.cs" t="Include" />
             <e p="20210119085115_visibility.cs" t="Include" />
             <e p="20210119085115_visibility.Designer.cs" t="Include" />
+            <e p="20210126105548_menu.cs" t="Include" />
+            <e p="20210126105548_menu.Designer.cs" t="Include" />
+            <e p="20210126115808_menuroleid.cs" t="Include" />
+            <e p="20210126115808_menuroleid.Designer.cs" t="Include" />
+            <e p="20210126124500_menurole.cs" t="Include" />
+            <e p="20210126124500_menurole.Designer.cs" t="Include" />
+            <e p="20210126151303_staticpages.cs" t="Include" />
+            <e p="20210126151303_staticpages.Designer.cs" t="Include" />
             <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
           </e>
+          <e p="Page.cs" t="Include" />
+          <e p="PagesService.cs" t="Include" />
           <e p="RoleConfiguration.cs" t="Include" />
           <e p="Search.cs" t="Include" />
           <e p="Tag.cs" t="Include" />
@@ -62,14 +75,18 @@
         <e p="Pages" t="Include">
           <e p="_Host.cshtml" t="Include" />
           <e p="AddArticle.razor" t="Include" />
+          <e p="AddPage.razor" t="Include" />
           <e p="Admin.razor" t="Include" />
           <e p="Articles.razor" t="Include" />
           <e p="ArticleView.razor" t="Include" />
           <e p="Browse.razor" t="Include" />
           <e p="EditArticle.razor" t="Include" />
+          <e p="EditPage.razor" t="Include" />
+          <e p="EditUi.razor" t="Include" />
           <e p="Error.cshtml" t="Include" />
           <e p="Error.cshtml.cs" t="Include" />
           <e p="Login.razor" t="Include" />
+          <e p="ViewPage.razor" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">

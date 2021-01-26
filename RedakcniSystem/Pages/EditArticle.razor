@@ -33,16 +33,16 @@
                 <InputText @bind-Value=tag.Content class="form-control" id="Tags" />
                 <button type="button" class="btn btn-danger" @onclick="() => Article.Tags.Remove(tag)">Delete tag</button>
             }
+            <br/>
+            <button type="button" class="btn btn-secondary" @onclick="() => Article.Tags.Add(new Tag())">Add tag</button>
+        </div>
         <div class="form-group">
           <label for="Visibility">Visibility</label>
           <InputCheckbox @bind-Value=Article.Visible class="form-control" id="Visibility"/>
         </div>
             <br/>
-        <button type="button" class="btn btn-secondary" @onclick="() => Article.Tags.Add(new Tag())">Add tag</button>
-        </div>
             <br/>
-            <br/>
-        <button type="button" class="btn btn-primary" @onclick="() => CreateArticle()">Edit article</button>
+        <button type="button" class="btn btn-primary" @onclick="() => ArticleEdit()">Edit article</button>
     </EditForm>
     </Authorized>
 </AuthorizeView>
@@ -57,7 +57,7 @@
         Article = ArticleService.GetArticle(Id);
     }
 
-    public void CreateArticle()
+    public void ArticleEdit()
     {
         ArticleService.EditArticle(Article);
         NavigationManager.NavigateTo("/articles");

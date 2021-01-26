@@ -1,0 +1,91 @@
+﻿@page "/editui"
+@using RedakcniSystem.Data
+@using Microsoft.AspNetCore.Identity
+@inject UsersService UsersService
+@inject MenuService MenuService
+
+<select @bind="roleId">
+    @foreach (var role in Roles)
+    {
+        <option value="@role.Id">@role.Name</option>
+    }
+    <option value="NULL">Logged out</option>
+</select>
+
+
+@if (menu != null)
+{
+    <div class="form-group">
+        @foreach (var button in menu.Buttons)
+        {
+            <br/>
+            <label for="ButtonName">Button Name:</label>
+            <input type="text" @bind=button.Text class="form-control" id="ButtonName"/>
+            <label for="ButtonLink">Button Link:</label>
+            <input type="text" @bind=button.Link class="form-control" id="ButtonLink"/>
+            <button type="button" class="btn btn-danger" @onclick="() => menu.Buttons.Remove(button)">Delete button</button>
+            <br/>
+        }
+        <br/>
+        <br/>
+        <button type="button" class="btn btn-secondary" @onclick="() => menu.Buttons.Add(new MenuButton())">Add button</button>
+    </div>
+    <button @onclick="() => SaveMenu()">Save</button>
+}
+@code{
+
+    List<IdentityRole> Roles = new List<IdentityRole>();
+    Menu menu = null;
+    IdentityRole SelectedRole = null;
+    string selectRoleId;
+    string roleId
+    {
+        get { return selectRoleId; }
+        set
+        {
+            selectRoleId = value;
+            OnRoleChange();
+        }
+    }
+    
+    protected override void OnInitialized()
+    {
+        Roles = UsersService.GetRoles();
+        SelectedRole = Roles.First();
+        menu = MenuService.GetMenuByRoleId(selectRoleId);
+        if (menu == null)
+        {
+            menu = new Menu
+            {
+                Role = selectRoleId,
+                Buttons = new List<MenuButton>()
+            };
+            MenuService.AddMenu(menu);
+        }
+    }
+
+    void OnRoleChange()
+    {
+        if (selectRoleId == "NULL")
+        {
+            SelectedRole = null;
+        }
+        else
+        {
+            SelectedRole = Roles.FirstOrDefault(r => r.Id == selectRoleId);
+        }
+        menu = MenuService.GetMenuByRoleId(selectRoleId);
+        if (menu == null)
+        {
+            menu = new Menu();
+            menu.Role = selectRoleId;
+            menu.Buttons = new List<MenuButton>();
+            MenuService.AddMenu(menu);
+        }
+    }
+
+    void SaveMenu()
+    {
+        MenuService.EditMenu(menu);
+    }
+}

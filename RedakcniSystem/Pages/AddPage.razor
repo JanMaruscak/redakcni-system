@@ -1,0 +1,28 @@
+﻿@page "/addpage"
+@using RedakcniSystem.Data
+@inject PagesService PagesService
+@inject NavigationManager NavigationManager
+
+<AuthorizeView>
+    <Authorized Context="Auth">
+        <EditForm Model=Page>
+            <div class="form-group">
+                <label for="Link">Link</label>
+                <InputText @bind-Value=Page.Link class="form-control" id="Link" />
+            </div>
+            <div class="form-group">
+                <label for="Html">Html</label>
+                <InputText @bind-Value=Page.Html class="form-control" id="Html"/>
+            </div>
+            <button type="button" class="btn btn-primary" @onclick="() => CreatePage()">Add page</button>
+        </EditForm>
+    </Authorized>
+</AuthorizeView>
+@code{
+    Page Page = new Page();
+
+    public void CreatePage()
+    {
+        PagesService.AddPage(Page);
+    }
+}

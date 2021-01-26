@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RedakcniSystem.Data;
 
 namespace RedakcniSystem.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210126105548_menu")]
+    partial class menu
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -244,59 +246,6 @@ namespace RedakcniSystem.Data.Migrations
                     b.ToTable("Articles");
                 });
 
-            modelBuilder.Entity("RedakcniSystem.Data.Menu", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Role")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Menus");
-                });
-
-            modelBuilder.Entity("RedakcniSystem.Data.MenuButton", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Link")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int?>("MenuId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Text")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MenuId");
-
-                    b.ToTable("MenuButton");
-                });
-
-            modelBuilder.Entity("RedakcniSystem.Data.Page", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Html")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Link")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Pages");
-                });
-
             modelBuilder.Entity("RedakcniSystem.Data.Tag", b =>
                 {
                     b.Property<int>("Id")
@@ -367,13 +316,6 @@ namespace RedakcniSystem.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("RedakcniSystem.Data.MenuButton", b =>
-                {
-                    b.HasOne("RedakcniSystem.Data.Menu", null)
-                        .WithMany("Buttons")
-                        .HasForeignKey("MenuId");
-                });
-
             modelBuilder.Entity("RedakcniSystem.Data.Tag", b =>
                 {
                     b.HasOne("RedakcniSystem.Data.Article", null)
@@ -384,11 +326,6 @@ namespace RedakcniSystem.Data.Migrations
             modelBuilder.Entity("RedakcniSystem.Data.Article", b =>
                 {
                     b.Navigation("Tags");
-                });
-
-            modelBuilder.Entity("RedakcniSystem.Data.Menu", b =>
-                {
-                    b.Navigation("Buttons");
                 });
 #pragma warning restore 612, 618
         }

@@ -7,8 +7,7 @@ namespace RedakcniSystem.Data
 {
     public class ArticleService
     {
-        public ApplicationDbContext DbContext { get; set; }
-        public RoleManager<IdentityRole> RoleManager;
+        private ApplicationDbContext DbContext { get; set; }
         public ArticleService(ApplicationDbContext dbContext)
         {
             DbContext = dbContext;

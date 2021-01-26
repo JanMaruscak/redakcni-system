@@ -1,62 +1,145 @@
-﻿<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-    <AuthorizeView>
-        <NotAuthorized>
-            <div class="container">
-                <a class="navbar-brand" href="">Redactional System</a>
-                <button class="navbar-toggler" type="button" @onclick="ToggleNavMenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <NavLink class="nav-link text-dark" href="" Match="NavLinkMatch.All">
-                                <span class="oi oi-home" aria-hidden="true"></span> Articles
-                            </NavLink>
-                        </li>
-                        <li class="nav-item">
-                            <NavLink class="nav-link text-dark" href="/browse">
-                                <span class="oi oi-home" aria-hidden="true"></span> Browse
-                            </NavLink>
-                        </li>
-                    </ul>
+﻿@using RedakcniSystem.Data
+@using Microsoft.AspNetCore.Http
+@inject MenuService MenuService
+@inject IHttpContextAccessor IHttp
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Components.Authorization
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+
+@if (menu != null)
+{
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <AuthorizeView>
+            <NotAuthorized>
+                <div class="container">
+                    <a class="navbar-brand" href="">Redactional System</a>
+                    <button class="navbar-toggler" type="button" @onclick="ToggleNavMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+                        <ul class="navbar-nav flex-grow-1">
+                            @foreach (var button in menu.Buttons)
+                            {
+                                <li class="nav-item">
+                                    <NavLink class="nav-link text-dark" href="@button.Link">
+                                        <span class="oi oi-home" aria-hidden="true"></span> @button.Text
+                                    </NavLink>
+                                </li>
+                            }
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </NotAuthorized>
-        <Authorized>
-            <div class="container">
-                <a class="navbar-brand" href="">Redactional System</a>
-                <button class="navbar-toggler" type="button" @onclick="ToggleNavMenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <NavLink class="nav-link text-dark" href="" Match="NavLinkMatch.All">
-                                <span class="oi oi-home" aria-hidden="true"></span> Articles
-                            </NavLink>
-                        </li>
-                        <li class="nav-item">
-                            <NavLink class="nav-link text-dark" href="/browse">
-                                <span class="oi oi-home" aria-hidden="true"></span> Browse
-                            </NavLink>
-                        </li>
-                        <li class="nav-item">
-                            <NavLink class="nav-link text-dark" href="addarticle">
-                                <span class="oi oi-plus" aria-hidden="true"></span> Add article
-                            </NavLink>
-                        </li>
-                    </ul>
+            </NotAuthorized>
+            <Authorized>
+                <div class="container">
+                    <a class="navbar-brand" href="">Redactional System</a>
+                    <button class="navbar-toggler" type="button" @onclick="ToggleNavMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+                        <ul class="navbar-nav flex-grow-1">
+                            @foreach (var button in menu.Buttons)
+                            {
+                                <li class="nav-item">
+                                    <NavLink class="nav-link text-dark" href="@button.Link">
+                                        <span class="oi oi-home" aria-hidden="true"></span> @button.Text
+                                    </NavLink>
+                                </li>
+                            }
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </Authorized>
-    </AuthorizeView>
-</nav>
+            </Authorized>
+        </AuthorizeView>
+    </nav>
+}
+else
+{
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <AuthorizeView>
+            <NotAuthorized>
+                <div class="container">
+                    <a class="navbar-brand" href="">Redactional System</a>
+                    <button class="navbar-toggler" type="button" @onclick="ToggleNavMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <NavLink class="nav-link text-dark" href="" Match="NavLinkMatch.All">
+                                    <span class="oi oi-home" aria-hidden="true"></span> Articles
+                                </NavLink>
+                            </li>
+                            <li class="nav-item">
+                                <NavLink class="nav-link text-dark" href="/browse">
+                                    <span class="oi oi-home" aria-hidden="true"></span> Browse
+                                </NavLink>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </NotAuthorized>
+            <Authorized>
+                <div class="container">
+                    <a class="navbar-brand" href="">Redactional System</a>
+                    <button class="navbar-toggler" type="button" @onclick="ToggleNavMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <NavLink class="nav-link text-dark" href="" Match="NavLinkMatch.All">
+                                    <span class="oi oi-home" aria-hidden="true"></span> Articles
+                                </NavLink>
+                            </li>
+                            <li class="nav-item">
+                                <NavLink class="nav-link text-dark" href="/browse">
+                                    <span class="oi oi-home" aria-hidden="true"></span> Browse
+                                </NavLink>
+                            </li>
+                            <li class="nav-item">
+                                <NavLink class="nav-link text-dark" href="addarticle">
+                                    <span class="oi oi-plus" aria-hidden="true"></span> Add article
+                                </NavLink>
+                            </li>
+                            <li class="nav-item">
+                                <NavLink class="nav-link text-dark" href="editui">
+                                    <span class="oi oi-plus" aria-hidden="true"></span> Edit ui
+                                </NavLink>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </Authorized>
+        </AuthorizeView>
+    </nav>
+}
 @code {
     bool collapseNavMenu = true;
 
     string baseMenuClass = "navbar-collapse d-sm-inline-flex flex-sm-row-reverse";
 
     string NavMenuCssClass => baseMenuClass + (collapseNavMenu ? " collapse" : "");
+
+    public Menu menu = null;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        SetMenu();
+
+    }
+
+    private async Task SetMenu()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        if (user.Identity != null && !user.Identity.IsAuthenticated)
+        {
+            menu = MenuService.GetMenuByRoleId("NULL");
+        }
+    }
 
     void ToggleNavMenu()
     {

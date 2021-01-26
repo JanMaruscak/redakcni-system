@@ -1,0 +1,32 @@
+﻿@page "/editpage/{name}"
+@using RedakcniSystem.Data
+@inject PagesService PagesService
+@inject NavigationManager NavigationManager
+
+<EditForm Model=@Page>
+    <div class="form-group">
+        <label for="Link">Link</label>
+        <InputText @bind-Value=Page.Link class="form-control" id="Link" />
+    </div>
+    <div class="form-group">
+        <label for="Html">Html</label>
+        <InputText @bind-Value=Page.Html class="form-control" id="Html"/>
+    </div>
+    <button type="button" class="btn btn-primary" @onclick="() => PageEdit()">Edit page</button>
+</EditForm>
+@code{
+    [Parameter]
+    public string Name { get; set; }
+    
+    Page Page = new Page();
+
+    protected override void OnInitialized()
+    {
+        Page = PagesService.GetPageByName(Name);
+    }
+
+    public void PageEdit()
+    {
+        PagesService.EditPage(Page);
+    }
+}

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 
@@ -17,9 +18,9 @@ namespace RedakcniSystem.Data
             /*roleManager.CreateAsync(new IdentityRole("user"));
             roleManager.CreateAsync(new IdentityRole("admin"));
             roleManager.CreateAsync(new IdentityRole("redactor"));*/
-            roleManager.CreateAsync(new IdentityRole("redactor"));
+            /*roleManager.CreateAsync(new IdentityRole("redactor"));
             var lol = UserManager.GetUsersInRoleAsync("admin");
-            var lol2 = UserManager.GetUsersInRoleAsync("redactor");
+            var lol2 = UserManager.GetUsersInRoleAsync("redactor");*/
         }
 
         public async Task AddAdmin(string email)
@@ -31,6 +32,16 @@ namespace RedakcniSystem.Data
         {
             var user = UserManager.FindByEmailAsync(email).Result;
             await UserManager.AddToRoleAsync(user, "redactor");
+        }
+
+        /*public IdentityRole GetRoleByUserId(int id)
+        {
+            
+        }*/
+
+        public List<IdentityRole> GetRoles()
+        {
+            return RoleManager.Roles.ToList();
         }
     }
 }

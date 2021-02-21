@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RedakcniSystem.Data;
 
 namespace RedakcniSystem.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210221172518_gallerydb")]
+    partial class gallerydb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -218,8 +220,8 @@ namespace RedakcniSystem.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("AlbumName")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("AlbumId")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Author")
                         .HasColumnType("TEXT");
@@ -282,13 +284,17 @@ namespace RedakcniSystem.Data.Migrations
 
             modelBuilder.Entity("RedakcniSystem.Data.GalleryModels+Album", b =>
                 {
-                    b.Property<string>("Name")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("ImageUrl")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Name");
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Albums");
                 });

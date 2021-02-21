@@ -2,17 +2,27 @@
 using System.IO;
 using System.Linq;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 
 namespace RedakcniSystem.Data
 {
     public class GalleryService
     {
         private IWebHostEnvironment _environment;
+        private ApplicationDbContext DbContext { get; set; }
 
 
-        public GalleryService(IWebHostEnvironment environment)
+        public GalleryService(IWebHostEnvironment environment, ApplicationDbContext dbContext)
         {
             _environment = environment;
+            DbContext = dbContext;
+            foreach (var album in GetAlbums())
+            {
+                if (!dbContext.Albums.Contains(album))
+                {
+                    dbContext.Albums.Add(album);
+                }
+            }
         }
 
 
@@ -34,7 +44,6 @@ namespace RedakcniSystem.Data
 
             return albums;
         }
-
         
         public List<GalleryModels.Photo> GetPhotos(string name)
         {

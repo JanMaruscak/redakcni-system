@@ -16,6 +16,7 @@ namespace RedakcniSystem.Data
         public string ShortText { get; set; }
         public List<Tag> Tags { get; set; }
         public bool Visible { get; set; }
+        public string AlbumName { get; set; }
 
         public Article()
         {

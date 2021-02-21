@@ -16,7 +16,12 @@
     }
 </div>
 <br>
+
 <p>@Article.Content</p>
+@if (!string.IsNullOrWhiteSpace(Article.AlbumName))
+{
+    <AlbumDetail Name=@Article.AlbumName></AlbumDetail>
+}
 @code{
     [Parameter]
     public int Id { get; set; }

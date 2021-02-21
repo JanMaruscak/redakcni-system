@@ -23,34 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="578e8821-ffa9-4b57-9e0d-1913f707509c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Models/ArticleId.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Models/FavoriteArticles.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Models/GalleryModels.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Services/GalleryService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RedakcniSystem/Pages/AlbumDetail.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RedakcniSystem/Pages/FavoriteArticles.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/dataSources/438eddf8-697f-4ecf-a82d-145cdd7914db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/dataSources/438eddf8-697f-4ecf-a82d-145cdd7914db.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Data/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Data/Article.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Models/Article.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Data/ArticleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Services/ArticleService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Data/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Models/Menu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Data/MenuButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Models/MenuButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Data/MenuService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Services/MenuService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Data/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Data/Page.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Models/Page.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Data/PagesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Services/PagesService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Data/RoleConfiguration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Data/Search.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Models/Search.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Data/Tag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Models/Tag.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Data/UsersService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Services/UsersService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Pages/Articles.razor" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Pages/Articles.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/RedakcniSystem.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/RedakcniSystem.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Shared/NavMenu.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Pages/AlbumDetail.razor" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Pages/AlbumDetail.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RedakcniSystem/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/app.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/wwwroot/css/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +165,7 @@
       <workItem from="1612865782022" duration="407000" />
       <workItem from="1613309284108" duration="2732000" />
       <workItem from="1613923490100" duration="596000" />
-      <workItem from="1613924609441" duration="1801000" />
+      <workItem from="1613924609441" duration="2073000" />
     </task>
     <servers />
   </component>
@@ -224,26 +199,26 @@
     </state>
     <state width="976" height="618" key="DebuggerActiveHint/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1611674747314" />
     <state width="1112" height="618" key="DebuggerActiveHint/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1611664783236" />
-    <state width="1877" height="2" key="GridCell.Tab.0.bottom" timestamp="1613926310933">
+    <state width="1877" height="2" key="GridCell.Tab.0.bottom" timestamp="1613926606409">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1238" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1612265270375" />
-    <state width="1877" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1613926310933" />
-    <state width="1877" height="2" key="GridCell.Tab.0.center" timestamp="1613926310933">
+    <state width="1877" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1613926606409" />
+    <state width="1877" height="2" key="GridCell.Tab.0.center" timestamp="1613926606409">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1238" height="2" key="GridCell.Tab.0.center/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1612265270375" />
-    <state width="1877" height="2" key="GridCell.Tab.0.center/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1613926310933" />
-    <state width="1877" height="2" key="GridCell.Tab.0.left" timestamp="1613926310933">
+    <state width="1877" height="2" key="GridCell.Tab.0.center/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1613926606409" />
+    <state width="1877" height="2" key="GridCell.Tab.0.left" timestamp="1613926606409">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1238" height="2" key="GridCell.Tab.0.left/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1612265270375" />
-    <state width="1877" height="2" key="GridCell.Tab.0.left/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1613926310933" />
-    <state width="1877" height="2" key="GridCell.Tab.0.right" timestamp="1613926310933">
+    <state width="1877" height="2" key="GridCell.Tab.0.left/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1613926606409" />
+    <state width="1877" height="2" key="GridCell.Tab.0.right" timestamp="1613926606409">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1238" height="2" key="GridCell.Tab.0.right/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1612265270375" />
-    <state width="1877" height="2" key="GridCell.Tab.0.right/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1613926310933" />
+    <state width="1877" height="2" key="GridCell.Tab.0.right/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1613926606409" />
     <state width="1877" height="233" key="GridCell.Tab.1.bottom" timestamp="1612862373478">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

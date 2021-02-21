@@ -1,5 +1,4 @@
 ﻿@using RedakcniSystem.Data
-@page "/album/{name}"
 @inject GalleryService _gallery
 
 <h3>@Name</h3>
@@ -27,7 +26,8 @@ else
     <div class="gallery-modal" style="@modalStyle">
         <a class="close" @onclick="() => Close()">Zavřít</a>
         <div class="gallery-modal-box">
-            <img class="img-fluid" src="@_photos[index].ImageUrl"/>
+            <img class="img-fluid" style="max-height: 40vw; max-width: 40vw" src="@_photos[index].ImageUrl"/>
+            <p style="text-align: center">@(index+1)/@(_photos.Count)</p>
         </div>
         <a class="prev" @onclick="() => Slide(-1)"></a>
         <a class="next" @onclick="() => Slide(1)"></a>

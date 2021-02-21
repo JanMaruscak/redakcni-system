@@ -1,0 +1,84 @@
+﻿@using RedakcniSystem.Data
+@page "/album/{name}"
+@inject GalleryService _gallery
+
+<h3>@Name</h3>
+
+@if (_photos == null)
+{
+    <p>Načítání...</p>
+}
+else
+{
+
+    <div class="row">
+        <Virtualize ItemsProvider="GetItems" Context="photo">
+            <ItemContent>
+                <div class="col-lg-4" @onclick="() => SelectImage(_photos.IndexOf(photo))">
+                    <img src="@photo.ImageUrl" class="img-fluid gallery-image"  />
+                </div>
+            </ItemContent>
+            <Placeholder>
+                <div class="col-lg-4">Načítání...</div>
+            </Placeholder>
+        </Virtualize>
+    </div>
+
+    <div class="gallery-modal" style="@modalStyle">
+        <a class="close" @onclick="() => Close()">Zavřít</a>
+        <div class="gallery-modal-box">
+            <img class="img-fluid" src="@_photos[index].ImageUrl"/>
+        </div>
+        <a class="prev" @onclick="() => Slide(-1)"></a>
+        <a class="next" @onclick="() => Slide(1)"></a>
+    </div>
+}
+
+
+
+@code {
+
+    [Parameter]
+    public string Name { get; set; }
+
+    private List<GalleryModels.Photo> _photos;
+
+    private int index = 0;
+    private string modalStyle = "display: none;";
+
+    private void SelectImage(int index)
+    {
+        this.index = index;
+        modalStyle = "";
+
+        StateHasChanged();
+    }
+
+    private void Close()
+    {
+        modalStyle = "display: none";
+    }
+
+    private void Slide(int move)
+    {
+        if(index + move >= 0 && index + move < _photos.Count)
+        {
+            index += move;
+        }
+    }
+
+
+    protected override void OnInitialized()
+    {
+        _photos = _gallery.GetPhotos(Name);
+    }
+
+    private async ValueTask<ItemsProviderResult<GalleryModels.Photo>> GetItems(ItemsProviderRequest request)
+    {
+        int itemsCount = Math.Min(request.Count, _photos.Count - request.StartIndex);
+
+
+        return new ItemsProviderResult<GalleryModels.Photo>(_photos.Skip(request.StartIndex).Take(itemsCount), _photos.Count);
+    }
+
+}

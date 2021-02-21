@@ -1,4 +1,4 @@
-﻿@page "/"
+﻿@page "/favorites"
 @using RedakcniSystem.Data
 @using Microsoft.AspNetCore.Http
 @using System.Security.Claims
@@ -11,6 +11,10 @@
 <div class="card-deck">
     @foreach (var article in articles)
     {
+        @if (!Liked.Any(x => x.Article == article.Id))
+        {
+            continue;
+        }
         <div class="card">
             <img class="card-img-top" src="@article.ImageUrl" alt="Card image cap">
             <div class="card-body">
@@ -20,7 +24,7 @@
               <AuthorizeView>
                   <Authorized>
                       @if (!Liked.Any(x => x.Article == article.Id))
-                      {
+                      {<button class="btn btn-block btn-primary"><i class="fa fa-thumbs-up">Like</i> </button>
                           <button type="button" class="btn btn-success" @onclick="() => LikeArticle(article.Id)">Like</button>
                       }
                       else

@@ -48,5 +48,36 @@ namespace RedakcniSystem.Data
             var result = articles.Where(t => t.Title.ToLower().Contains(Search.Content) || t.ShortText.ToLower().Contains(Search.Content));
             return result.ToList();
         }
+        
+
+        public void LikeArticle(int articleId, string userId)
+        {
+            if(!DbContext.FavoriteArticles.Local.Any(x => x.UserId == userId))
+            {
+                DbContext.FavoriteArticles.Add(new FavoriteArticles() {LikedArticles = new List<ArticleId>(),UserId = userId});
+            }
+            DbContext.FavoriteArticles.Include(a => a.LikedArticles).First(x => x.UserId == userId)?.LikedArticles.Add(new ArticleId(){Article = articleId});
+            DbContext.SaveChanges();
+        }
+
+        public List<ArticleId> GetLiked(string userId)
+        {
+            if(!DbContext.FavoriteArticles.Local.Any(x => x.UserId == userId))
+            {
+                DbContext.FavoriteArticles.Add(new FavoriteArticles() {LikedArticles = new List<ArticleId>(),UserId = userId});
+            }
+            DbContext.SaveChanges();
+            return DbContext.FavoriteArticles.Include(a => a.LikedArticles).FirstOrDefault(x => x.UserId == userId)?.LikedArticles;
+        }
+
+        public void UnlikeArticle(int articleId, string userId)
+        {
+            if(!DbContext.FavoriteArticles.Local.Any(x => x.UserId == userId))
+            {
+                DbContext.FavoriteArticles.Add(new FavoriteArticles() {LikedArticles = new List<ArticleId>(),UserId = userId});
+            }
+            DbContext.FavoriteArticles.Include(a => a.LikedArticles).First(x => x.UserId == userId)?.LikedArticles.RemoveAll(x => x.Article == articleId);
+            DbContext.SaveChanges();
+        }
     }
 }

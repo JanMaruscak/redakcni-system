@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RedakcniSystem.Data;
 
 namespace RedakcniSystem.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210202111112_favoritearticle")]
+    partial class favoritearticle
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -244,39 +246,6 @@ namespace RedakcniSystem.Data.Migrations
                     b.ToTable("Articles");
                 });
 
-            modelBuilder.Entity("RedakcniSystem.Data.ArticleId", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("Article")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("FavoriteArticlesId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("FavoriteArticlesId");
-
-                    b.ToTable("ArticleId");
-                });
-
-            modelBuilder.Entity("RedakcniSystem.Data.FavoriteArticles", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("UserId")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("FavoriteArticles");
-                });
-
             modelBuilder.Entity("RedakcniSystem.Data.Menu", b =>
                 {
                     b.Property<int>("Id")
@@ -400,13 +369,6 @@ namespace RedakcniSystem.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("RedakcniSystem.Data.ArticleId", b =>
-                {
-                    b.HasOne("RedakcniSystem.Data.FavoriteArticles", null)
-                        .WithMany("LikedArticles")
-                        .HasForeignKey("FavoriteArticlesId");
-                });
-
             modelBuilder.Entity("RedakcniSystem.Data.MenuButton", b =>
                 {
                     b.HasOne("RedakcniSystem.Data.Menu", null)
@@ -424,11 +386,6 @@ namespace RedakcniSystem.Data.Migrations
             modelBuilder.Entity("RedakcniSystem.Data.Article", b =>
                 {
                     b.Navigation("Tags");
-                });
-
-            modelBuilder.Entity("RedakcniSystem.Data.FavoriteArticles", b =>
-                {
-                    b.Navigation("LikedArticles");
                 });
 
             modelBuilder.Entity("RedakcniSystem.Data.Menu", b =>

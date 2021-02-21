@@ -6,8 +6,6 @@
       <e p="RedakcniSystem" t="IncludeRecursive">
         <e p="_Imports.razor" t="Include" />
         <e p="app.db" t="Include" />
-        <e p="app.db-shm" t="Include" />
-        <e p="app.db-wal" t="Include" />
         <e p="App.razor" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
@@ -27,11 +25,6 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Data" t="Include">
           <e p="ApplicationDbContext.cs" t="Include" />
-          <e p="Article.cs" t="Include" />
-          <e p="ArticleService.cs" t="Include" />
-          <e p="Menu.cs" t="Include" />
-          <e p="MenuButton.cs" t="Include" />
-          <e p="MenuService.cs" t="Include" />
           <e p="Migrations" t="Include">
             <e p="00000000000000_CreateIdentitySchema.cs" t="Include" />
             <e p="00000000000000_CreateIdentitySchema.Designer.cs" t="Include" />
@@ -55,14 +48,32 @@
             <e p="20210126124500_menurole.Designer.cs" t="Include" />
             <e p="20210126151303_staticpages.cs" t="Include" />
             <e p="20210126151303_staticpages.Designer.cs" t="Include" />
+            <e p="20210202111112_favoritearticle.cs" t="Include" />
+            <e p="20210202111112_favoritearticle.Designer.cs" t="Include" />
+            <e p="20210209090516_favarticle.cs" t="Include" />
+            <e p="20210209090516_favarticle.Designer.cs" t="Include" />
+            <e p="20210209091702_favarticleupdate.cs" t="Include" />
+            <e p="20210209091702_favarticleupdate.Designer.cs" t="Include" />
             <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
           </e>
-          <e p="Page.cs" t="Include" />
-          <e p="PagesService.cs" t="Include" />
-          <e p="RoleConfiguration.cs" t="Include" />
-          <e p="Search.cs" t="Include" />
-          <e p="Tag.cs" t="Include" />
-          <e p="UsersService.cs" t="Include" />
+          <e p="Models" t="Include">
+            <e p="Article.cs" t="Include" />
+            <e p="ArticleId.cs" t="Include" />
+            <e p="FavoriteArticles.cs" t="Include" />
+            <e p="GalleryModels.cs" t="Include" />
+            <e p="Menu.cs" t="Include" />
+            <e p="MenuButton.cs" t="Include" />
+            <e p="Page.cs" t="Include" />
+            <e p="Search.cs" t="Include" />
+            <e p="Tag.cs" t="Include" />
+          </e>
+          <e p="Services" t="Include">
+            <e p="ArticleService.cs" t="Include" />
+            <e p="GalleryService.cs" t="Include" />
+            <e p="MenuService.cs" t="Include" />
+            <e p="PagesService.cs" t="Include" />
+            <e p="UsersService.cs" t="Include" />
+          </e>
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -77,15 +88,19 @@
           <e p="AddArticle.razor" t="Include" />
           <e p="AddPage.razor" t="Include" />
           <e p="Admin.razor" t="Include" />
+          <e p="AlbumDetail.razor" t="Include" />
           <e p="Articles.razor" t="Include" />
           <e p="ArticleView.razor" t="Include" />
           <e p="Browse.razor" t="Include" />
+          <e p="Components" t="Include" />
           <e p="EditArticle.razor" t="Include" />
           <e p="EditPage.razor" t="Include" />
           <e p="EditUi.razor" t="Include" />
           <e p="Error.cshtml" t="Include" />
           <e p="Error.cshtml.cs" t="Include" />
+          <e p="FavoriteArticles.razor" t="Include" />
           <e p="Login.razor" t="Include" />
+          <e p="Pages" t="Include" />
           <e p="ViewPage.razor" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
@@ -126,6 +141,13 @@
             <e p="site.css" t="Include" />
           </e>
           <e p="favicon.ico" t="Include" />
+          <e p="Gallery" t="Include">
+            <e p="Album1" t="Include">
+              <e p="bart004.jpg" t="Include" />
+              <e p="kitten (2).jpg" t="Include" />
+              <e p="maxresdefault.jpg" t="Include" />
+            </e>
+          </e>
         </e>
       </e>
       <e p="RedakcniSystem.sln" t="IncludeFlat" />

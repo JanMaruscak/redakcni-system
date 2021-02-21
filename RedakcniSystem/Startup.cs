@@ -46,6 +46,7 @@ namespace RedakcniSystem
             services.AddScoped<UsersService>();
             services.AddScoped<MenuService>();
             services.AddScoped<PagesService>();
+            services.AddScoped<GalleryService>();
             services.AddHttpContextAccessor();
         }
 

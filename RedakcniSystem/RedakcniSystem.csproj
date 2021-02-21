@@ -17,4 +17,10 @@
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.2" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Pages\Components" />
+      <Folder Include="Pages\Pages" />
+      <Folder Include="wwwroot\Gallery\Album1" />
+    </ItemGroup>
+
 </Project>

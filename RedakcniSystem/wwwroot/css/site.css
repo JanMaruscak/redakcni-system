@@ -52,3 +52,44 @@ a, .btn-link {
         right: 0.75rem;
         top: 0.5rem;
     }
+.gallery-image {
+    padding-top: 15px;
+}
+
+.gallery-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1050;
+    overflow: hidden;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.gallery-modal-box{
+    margin: 0 auto;
+    padding: 5%;
+    align-self: center;
+}
+
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    height: 100%;
+    width: auto;
+    padding: 15%;
+    top: 0;
+}
+.next{
+    right: 0;
+}
+.close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px;
+    z-index: 1060;
+}

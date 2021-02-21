@@ -9,6 +9,7 @@ namespace RedakcniSystem.Data
     public class ApplicationDbContext : IdentityDbContext
     {
         public DbSet<Article> Articles { get; set; }
+        public DbSet<FavoriteArticles> FavoriteArticles { get; set; }
         public DbSet<Menu> Menus { get; set; }
         public DbSet<Page> Pages { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
@@ -18,7 +19,6 @@ namespace RedakcniSystem.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.ApplyConfiguration(new RoleConfiguration());
         }
     }
 }

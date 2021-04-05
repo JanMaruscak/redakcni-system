@@ -25,6 +25,9 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Data" t="Include">
           <e p="ApplicationDbContext.cs" t="Include" />
+          <e p="Controllers" t="Include">
+            <e p="EmailController.cs" t="Include" />
+          </e>
           <e p="Migrations" t="Include">
             <e p="00000000000000_CreateIdentitySchema.cs" t="Include" />
             <e p="00000000000000_CreateIdentitySchema.Designer.cs" t="Include" />
@@ -54,13 +57,20 @@
             <e p="20210209090516_favarticle.Designer.cs" t="Include" />
             <e p="20210209091702_favarticleupdate.cs" t="Include" />
             <e p="20210209091702_favarticleupdate.Designer.cs" t="Include" />
+            <e p="20210221172518_gallerydb.cs" t="Include" />
+            <e p="20210221172518_gallerydb.Designer.cs" t="Include" />
+            <e p="20210221173013_gallerydbstring.cs" t="Include" />
+            <e p="20210221173013_gallerydbstring.Designer.cs" t="Include" />
             <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
           </e>
           <e p="Models" t="Include">
             <e p="Article.cs" t="Include" />
             <e p="ArticleId.cs" t="Include" />
+            <e p="Database.cs" t="Include" />
+            <e p="Email.cs" t="Include" />
             <e p="FavoriteArticles.cs" t="Include" />
             <e p="GalleryModels.cs" t="Include" />
+            <e p="MailModel.cs" t="Include" />
             <e p="Menu.cs" t="Include" />
             <e p="MenuButton.cs" t="Include" />
             <e p="Page.cs" t="Include" />
@@ -75,6 +85,7 @@
             <e p="UsersService.cs" t="Include" />
           </e>
         </e>
+        <e p="Ignore.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="net5.0" t="Include">
@@ -115,6 +126,12 @@
           <e p="NavMenu.razor" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
+        <e p="ViewRenderService.cs" t="Include" />
+        <e p="Views" t="Include">
+          <e p="Email" t="Include">
+            <e p="Email.cshtml" t="Include" />
+          </e>
+        </e>
         <e p="wwwroot" t="Include">
           <e p="css" t="Include">
             <e p="bootstrap" t="Include">

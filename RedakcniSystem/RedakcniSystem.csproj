@@ -10,6 +10,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="MailKit" Version="2.11.1" />
         <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.2" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.2" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.2" />
@@ -20,6 +21,7 @@
     <ItemGroup>
       <Folder Include="Pages\Components" />
       <Folder Include="Pages\Pages" />
+      <Folder Include="Views" />
       <Folder Include="wwwroot\Gallery\Album1" />
     </ItemGroup>
 

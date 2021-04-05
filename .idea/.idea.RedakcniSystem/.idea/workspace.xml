@@ -23,9 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="578e8821-ffa9-4b57-9e0d-1913f707509c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Controllers/EmailController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Models/Database.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Models/Email.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Models/MailModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RedakcniSystem/ViewRenderService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RedakcniSystem/Views/Email/Email.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/dataSources/438eddf8-697f-4ecf-a82d-145cdd7914db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/dataSources/438eddf8-697f-4ecf-a82d-145cdd7914db.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Pages/AlbumDetail.razor" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Pages/AlbumDetail.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedakcniSystem/RedakcniSystem.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/RedakcniSystem.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RedakcniSystem/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/app.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedakcniSystem/app.db-shm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedakcniSystem/app.db-wal" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +69,6 @@
         <option value="$PROJECT_DIR$/RedakcniSystem/Data/Tag.cs" />
         <option value="$PROJECT_DIR$/RedakcniSystem/Pages/Browse.cs" />
         <option value="$PROJECT_DIR$/RedakcniSystem/Data/Search.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/ArticleView.razor" />
         <option value="$PROJECT_DIR$/RedakcniSystem/Data/Article.cs" />
         <option value="$PROJECT_DIR$/RedakcniSystem/Pages/Browse.razor" />
         <option value="$PROJECT_DIR$/RedakcniSystem/Pages/Admin.cs" />
@@ -70,7 +81,6 @@
         <option value="$PROJECT_DIR$/RedakcniSystem/Data/MenuService.cs" />
         <option value="$PROJECT_DIR$/RedakcniSystem/Pages/EditUi.razor" />
         <option value="$PROJECT_DIR$/RedakcniSystem/Data/Page.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/EditArticle.razor" />
         <option value="$PROJECT_DIR$/RedakcniSystem/Pages/AddPage.razor" />
         <option value="$PROJECT_DIR$/RedakcniSystem/Pages/EditPage.razor" />
         <option value="$PROJECT_DIR$/RedakcniSystem/Pages/ViewPage.razor" />
@@ -84,12 +94,22 @@
         <option value="$PROJECT_DIR$/RedakcniSystem/Pages/FavoriteArticles.razor" />
         <option value="$PROJECT_DIR$/RedakcniSystem/Data/GalleryService.cs" />
         <option value="$PROJECT_DIR$/RedakcniSystem/Data/RoleConfiguration.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/ApplicationDbContext.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Models/GalleryModels.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Services/GalleryService.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Startup.cs" />
         <option value="$PROJECT_DIR$/RedakcniSystem/wwwroot/css/site.css" />
+        <option value="$PROJECT_DIR$/RedakcniSystem/Data/ApplicationDbContext.cs" />
+        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Services/GalleryService.cs" />
+        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Models/GalleryModels.cs" />
+        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Models/Article.cs" />
+        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/EditArticle.razor" />
+        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/ArticleView.razor" />
         <option value="$PROJECT_DIR$/RedakcniSystem/Pages/AlbumDetail.razor" />
+        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Models/Email.cs" />
+        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Models/MailModel.cs" />
+        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/Email/Email.cshtml" />
+        <option value="$PROJECT_DIR$/RedakcniSystem/ViewRenderService.cs" />
+        <option value="$PROJECT_DIR$/RedakcniSystem/Startup.cs" />
+        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Models/Database.cs" />
+        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Controllers/EmailController.cs" />
+        <option value="$PROJECT_DIR$/RedakcniSystem/Ignore.cs" />
       </list>
     </option>
   </component>
@@ -108,6 +128,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="XThreadsFramesViewSplitterKey" value="0.67304623" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys_rider" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.RedakcniSystem">
@@ -165,7 +186,16 @@
       <workItem from="1612865782022" duration="407000" />
       <workItem from="1613309284108" duration="2732000" />
       <workItem from="1613923490100" duration="596000" />
-      <workItem from="1613924609441" duration="2073000" />
+      <workItem from="1613924609441" duration="2203000" />
+      <workItem from="1613926867905" duration="2256000" />
+      <workItem from="1613929516270" duration="60000" />
+      <workItem from="1614074256141" duration="449000" />
+      <workItem from="1614542133393" duration="132000" />
+      <workItem from="1614678725714" duration="594000" />
+      <workItem from="1616492618644" duration="2751000" />
+      <workItem from="1617090762541" duration="3177000" />
+      <workItem from="1617641044458" duration="1058000" />
+      <workItem from="1617647107743" duration="2500000" />
     </task>
     <servers />
   </component>
@@ -199,26 +229,26 @@
     </state>
     <state width="976" height="618" key="DebuggerActiveHint/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1611674747314" />
     <state width="1112" height="618" key="DebuggerActiveHint/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1611664783236" />
-    <state width="1877" height="2" key="GridCell.Tab.0.bottom" timestamp="1613926606409">
+    <state width="1877" height="2" key="GridCell.Tab.0.bottom" timestamp="1617648466444">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1238" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1612265270375" />
-    <state width="1877" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1613926606409" />
-    <state width="1877" height="2" key="GridCell.Tab.0.center" timestamp="1613926606409">
+    <state width="2517" height="13" key="GridCell.Tab.0.bottom/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1614074466771" />
+    <state width="1877" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617648466444" />
+    <state width="1877" height="2" key="GridCell.Tab.0.center" timestamp="1617648466444">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1238" height="2" key="GridCell.Tab.0.center/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1612265270375" />
-    <state width="1877" height="2" key="GridCell.Tab.0.center/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1613926606409" />
-    <state width="1877" height="2" key="GridCell.Tab.0.left" timestamp="1613926606409">
+    <state width="2517" height="13" key="GridCell.Tab.0.center/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1614074466771" />
+    <state width="1877" height="2" key="GridCell.Tab.0.center/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617648466444" />
+    <state width="1877" height="2" key="GridCell.Tab.0.left" timestamp="1617648466444">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1238" height="2" key="GridCell.Tab.0.left/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1612265270375" />
-    <state width="1877" height="2" key="GridCell.Tab.0.left/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1613926606409" />
-    <state width="1877" height="2" key="GridCell.Tab.0.right" timestamp="1613926606409">
+    <state width="2517" height="13" key="GridCell.Tab.0.left/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1614074466771" />
+    <state width="1877" height="2" key="GridCell.Tab.0.left/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617648466444" />
+    <state width="1877" height="2" key="GridCell.Tab.0.right" timestamp="1617648466444">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1238" height="2" key="GridCell.Tab.0.right/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1612265270375" />
-    <state width="1877" height="2" key="GridCell.Tab.0.right/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1613926606409" />
+    <state width="2517" height="13" key="GridCell.Tab.0.right/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1614074466771" />
+    <state width="1877" height="2" key="GridCell.Tab.0.right/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617648466444" />
     <state width="1877" height="233" key="GridCell.Tab.1.bottom" timestamp="1612862373478">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -303,6 +333,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="552" y="257" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1611038913450" />
+    <state x="461" y="170" key="SettingsEditor" timestamp="1617648809354">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="170" key="SettingsEditor/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617648809354" />
     <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1611661323147">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

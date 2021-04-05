@@ -73,6 +73,7 @@
             <e p="MailModel.cs" t="Include" />
             <e p="Menu.cs" t="Include" />
             <e p="MenuButton.cs" t="Include" />
+            <e p="MetaModel.cs" t="Include" />
             <e p="Page.cs" t="Include" />
             <e p="Search.cs" t="Include" />
             <e p="Tag.cs" t="Include" />
@@ -104,6 +105,7 @@
           <e p="ArticleView.razor" t="Include" />
           <e p="Browse.razor" t="Include" />
           <e p="Components" t="Include" />
+          <e p="Detail.cshtml" t="Include" />
           <e p="EditArticle.razor" t="Include" />
           <e p="EditPage.razor" t="Include" />
           <e p="EditUi.razor" t="Include" />
@@ -111,6 +113,7 @@
           <e p="Error.cshtml.cs" t="Include" />
           <e p="FavoriteArticles.razor" t="Include" />
           <e p="Login.razor" t="Include" />
+          <e p="MetaHelper.razor" t="Include" />
           <e p="Pages" t="Include" />
           <e p="ViewPage.razor" t="Include" />
         </e>

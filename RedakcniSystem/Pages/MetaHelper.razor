@@ -1,0 +1,65 @@
+﻿@using RedakcniSystem.Data.Models
+@using RedakcniSystem.Data
+@inject NavigationManager _manager
+@inject ArticleService ArticleService
+
+<meta name="or:url" content="@_manager.Uri">
+<meta name="twitter:card" content="summary_large_image">
+
+@foreach (MetaModel meta in metas)
+{
+    <meta name="@meta.Type" content="@meta.Content">
+}
+
+@code{
+    private List<MetaModel> metas;
+    protected override async Task OnInitializedAsync()
+    {
+        metas = new List<MetaModel>();
+        try
+        {
+            string[] url = _manager.Uri.Split('/');
+            if (_manager.Uri.ToLower().Contains("articleview"))
+            {
+                var article = ArticleService.GetArticle(Convert.ToInt32(url.Last()));
+                metas.Add(new MetaModel()
+                {
+                    Type = "or:type",
+                    Content = "article"
+                });
+                metas.Add(new MetaModel()
+                {
+                    Type = "or:title",
+                    Content = article.Title
+                });
+                metas.Add(new MetaModel()
+                {
+                    Type = "or:description",
+                    Content = article.ShortText
+                });
+                metas.Add(new MetaModel()
+                {
+                    Type = "or:image",
+                    Content = article.ImageUrl
+                });
+                metas.Add(new MetaModel()
+                {
+                    Type = "or:image:alt",
+                    Content = article.Title
+                });
+                metas.Add(new MetaModel()
+                {
+                    Type = "twitter:image",
+                    Content = article.Title
+                });
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+        
+    }
+
+}

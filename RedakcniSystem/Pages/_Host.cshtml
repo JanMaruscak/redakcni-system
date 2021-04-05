@@ -1,6 +1,7 @@
 ﻿@page "/"
 @namespace RedakcniSystem.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using RedakcniSystem.Pages
 @{
     Layout = null;
 }
@@ -15,6 +16,8 @@
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css"/>
     <link href="css/site.css" rel="stylesheet"/>
     <link href="RedakcniSystem.styles.css" rel="stylesheet"/>
+    
+<component type="typeof(MetaHelper)" render-mode="ServerPrerendered"/>
 </head>
 <body>
 <component type="typeof(App)" render-mode="ServerPrerendered"/>

@@ -18,8 +18,8 @@ namespace RedakcniSystem.Data.Controllers
         public IActionResult Email()
         {
             var message = new MimeMessage ();
-            message.From.Add (new MailboxAddress ("Jan Maruscak", "real.jan.maruscak@gmail.com"));
-            message.To.Add (new MailboxAddress (Database.Emails().First().ToString()));
+            message.From.Add (new MailboxAddress ("real.jan.maruscak@gmail.com"));
+            message.To.Add (new MailboxAddress ("maruscak.jan@ssakhk.cz"));
             message.Subject = Database.Articles().First().Title;
 
             message.Body = new TextPart ("plain") {
@@ -27,7 +27,7 @@ namespace RedakcniSystem.Data.Controllers
             };
 
             using (var client = new SmtpClient ()) {
-                client.Connect ("smtp.gmail.com", 465, false);
+                client.Connect ("smtp.gmail.com", 465);
 
                 // Note: only needed if the SMTP server requires authentication
                 client.Authenticate ("real.jan.maruscak@gmail.com", GmailPassword);

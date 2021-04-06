@@ -1,0 +1,76 @@
+﻿@page "/newsletter"
+@using RedakcniSystem.Data
+@inject UsersService UsersService
+@using Microsoft.AspNetCore.Http
+@using RedakcniSystem.Data.Models
+@inject IHttpContextAccessor IHttp
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<AuthorizeView Roles="admin">
+    <Authorized Context="lol">
+        <div class="form-group">
+            
+            @foreach (var email in AllSubscribed)
+            {
+        
+            <EditForm Model=@email>
+                <InputText @bind-Value=email.EmailAddress class="form-control" id="email" />
+                <button @onclick="() => Remove(email.EmailAddress)">Remove</button>
+            </EditForm>
+            }
+            <br/>
+        <EditForm Model=@Email>
+                <InputText @bind-Value=Email.EmailAddress class="form-control" id="Email-admin" />
+                <button @onclick='() => Add(Email.EmailAddress)'>Add new @Email.EmailAddress</button>
+                <button @onclick="() => Save()">Save</button>
+            
+
+        </EditForm>
+        </div>
+    </Authorized>
+    <NotAuthorized Context="lol">
+        <EditForm Model=@Email>
+        <InputText @bind-Value=Email.EmailAddress class="form-control" id="Email"/>
+        @if (UsersService.IsUserSubscribed(Email.EmailAddress) || string.IsNullOrWhiteSpace(Email.EmailAddress))
+        {
+            <button @onclick="() => Add(Email.EmailAddress)">Add newsletter to @Email.EmailAddress</button>
+        }
+        else
+        {
+            <button @onclick="() => Remove(Email.EmailAddress)">Remove newsletter from @Email.EmailAddress</button>
+        }
+        </EditForm>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code{
+    private Email Email;
+    private List<Email> AllSubscribed;
+    protected override void OnInitialized()
+    {
+        Email = new Email();
+        Email.EmailAddress = IHttp.HttpContext.User.Identity.Name;
+        AllSubscribed = UsersService.GetAllSubscribed();
+        
+    }
+
+    private void Add(string email)
+    {
+        UsersService.AddNewsletter(email);
+        AllSubscribed = UsersService.GetAllSubscribed();
+    }
+
+    private void Remove(string email)
+    {
+        UsersService.RemoveNewsletter(email);
+        AllSubscribed = UsersService.GetAllSubscribed();
+    }
+
+    private void Save()
+    {
+        UsersService.SaveChanges(AllSubscribed);
+        AllSubscribed = UsersService.GetAllSubscribed();
+    }
+    
+
+}

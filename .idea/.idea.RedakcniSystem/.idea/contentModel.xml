@@ -6,6 +6,8 @@
       <e p="RedakcniSystem" t="IncludeRecursive">
         <e p="_Imports.razor" t="Include" />
         <e p="app.db" t="Include" />
+        <e p="app.db-shm" t="Include" />
+        <e p="app.db-wal" t="Include" />
         <e p="App.razor" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
@@ -61,6 +63,8 @@
             <e p="20210221172518_gallerydb.Designer.cs" t="Include" />
             <e p="20210221173013_gallerydbstring.cs" t="Include" />
             <e p="20210221173013_gallerydbstring.Designer.cs" t="Include" />
+            <e p="20210406092656_newsletter.cs" t="Include" />
+            <e p="20210406092656_newsletter.Designer.cs" t="Include" />
             <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
           </e>
           <e p="Models" t="Include">
@@ -105,7 +109,6 @@
           <e p="ArticleView.razor" t="Include" />
           <e p="Browse.razor" t="Include" />
           <e p="Components" t="Include" />
-          <e p="Detail.cshtml" t="Include" />
           <e p="EditArticle.razor" t="Include" />
           <e p="EditPage.razor" t="Include" />
           <e p="EditUi.razor" t="Include" />
@@ -114,6 +117,7 @@
           <e p="FavoriteArticles.razor" t="Include" />
           <e p="Login.razor" t="Include" />
           <e p="MetaHelper.razor" t="Include" />
+          <e p="Newsletter.razor" t="Include" />
           <e p="Pages" t="Include" />
           <e p="ViewPage.razor" t="Include" />
         </e>

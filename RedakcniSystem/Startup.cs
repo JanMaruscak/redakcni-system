@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
@@ -49,6 +51,24 @@ namespace RedakcniSystem
             services.AddScoped<GalleryService>();
             services.AddHttpContextAccessor();
 
+            services.AddSwaggerGen(x =>
+            {
+                x.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo()
+                {
+                    Version = "v1",
+                    Title = "Redakcni system dokumentace",
+                    Contact = new Microsoft.OpenApi.Models.OpenApiContact()
+                    {
+                        Email = "web@novinky.cz"
+                    },
+                });
+
+                //pou�ije koment��e jako popisky - nutno zapnout generov�n� XML souboru 
+                //v nastaven� projektu:  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+                var file = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                x.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, file));
+            });
+
             services.AddMvc();
         }
 
@@ -71,6 +91,9 @@ namespace RedakcniSystem
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(x => { x.SwaggerEndpoint("/swagger/v1/swagger.json", "Redakcni system API V1"); });
 
             app.UseAuthentication();
             app.UseAuthorization();

@@ -11,8 +11,15 @@
     <meta name="@meta.Type" content="@meta.Content">
 }
 
+@if (!string.IsNullOrEmpty(_data))
+{
+    @((MarkupString) _data) //Vyrenderování strukturovaných dat
+}
+
+
 @code{
     private List<MetaModel> metas;
+    private string _data = "";
     protected override async Task OnInitializedAsync()
     {
         metas = new List<MetaModel>();
@@ -22,6 +29,34 @@
             if (_manager.Uri.ToLower().Contains("articleview"))
             {
                 var article = ArticleService.GetArticle(Convert.ToInt32(url.Last()));
+
+                Schema.NET.Article data = new Schema.NET.Article()
+                {
+                    DatePublished = article.Created,
+                    DateModified = article.Created,
+                    Headline = "Novinky - " + article.Title,
+                    Image = new Schema.NET.ImageObject()
+                    {
+                        Url = new Uri($"{_manager.BaseUri}{article.ImageUrl}")
+                    },
+                    Author = new Schema.NET.Person()
+                    {
+                        Name = article.Author,
+                    },
+                    Publisher = new Schema.NET.Organization()
+                    {
+                        Name = "Novinky",
+                        Email = "redakce@novinky.cz"
+                    },
+                    MainEntityOfPage = new Uri(_manager.Uri)
+
+                };
+
+    //Obalení dat do <script>
+                _data = $"<script type=\"application/ld+json\">{data.ToString()}</script>";
+                
+                
+                
                 metas.Add(new MetaModel()
                 {
                     Type = "or:type",

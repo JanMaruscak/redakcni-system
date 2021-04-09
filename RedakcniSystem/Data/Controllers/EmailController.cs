@@ -11,6 +11,7 @@ using static RedakcniSystem.Ignore;
 
 namespace RedakcniSystem.Data.Controllers
 {
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class EmailController : Controller
     {
         private ApplicationDbContext _dbContext;

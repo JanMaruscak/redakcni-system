@@ -23,16 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="578e8821-ffa9-4b57-9e0d-1913f707509c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/RedakcniSystem/Pages/Newsletter.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/dataSources/438eddf8-697f-4ecf-a82d-145cdd7914db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/dataSources/438eddf8-697f-4ecf-a82d-145cdd7914db.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Controllers/ArticleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Data/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RedakcniSystem/riderModule.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RedakcniSystem/Data/Controllers/EmailController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Controllers/EmailController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Data/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Data/Models/Database.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Models/Database.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Data/Services/UsersService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Data/Services/UsersService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Pages/Detail.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Pages/MetaHelper.razor" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Pages/MetaHelper.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedakcniSystem/RedakcniSystem.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/RedakcniSystem.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedakcniSystem/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RedakcniSystem/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/RedakcniSystem/app.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,79 +45,30 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/RedakcniSystem/Data/Models/Tag.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/22F10D1A-90B9-4317-8225-FA21FB51B8B7/12/EventCallbackWorkItem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/22F10D1A-90B9-4317-8225-FA21FB51B8B7/D/EventCallback.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/22F10D1A-90B9-4317-8225-FA21FB51B8B7/4D/RenderTreeBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/91875E31-7074-418E-A4C0-504E859DA32B/19/NavLink.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/22F10D1A-90B9-4317-8225-FA21FB51B8B7/8/ComponentBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/22F10D1A-90B9-4317-8225-FA21FB51B8B7/46/ComponentState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RedakcniSystem/Data/Models/GalleryModels.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/22F10D1A-90B9-4317-8225-FA21FB51B8B7/4A/RendererSynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RedakcniSystem/Data/Models/FavoriteArticles.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3819E4EE-5F01-49B7-95B7-A2B077D7F830/4A/RendererSynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3819E4EE-5F01-49B7-95B7-A2B077D7F830/12/EventCallbackWorkItem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F758DD2F-9E4C-41A0-B7A1-63138D66F75D/A/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/22F10D1A-90B9-4317-8225-FA21FB51B8B7/4A/RendererSynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3819E4EE-5F01-49B7-95B7-A2B077D7F830/8/ComponentBase.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/22F10D1A-90B9-4317-8225-FA21FB51B8B7/46/ComponentState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3819E4EE-5F01-49B7-95B7-A2B077D7F830/46/ComponentState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/22F10D1A-90B9-4317-8225-FA21FB51B8B7/D/EventCallback.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/chess/Assets/BoardGenerator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/91875E31-7074-418E-A4C0-504E859DA32B/19/NavLink.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/RedakcniSystem/Data/Models/GalleryModels.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/RedakcniSystem/Data/Models/FavoriteArticles.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/22F10D1A-90B9-4317-8225-FA21FB51B8B7/8/ComponentBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RedakcniSystem/Data/Models/ArticleId.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/22F10D1A-90B9-4317-8225-FA21FB51B8B7/4D/RenderTreeBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F758DD2F-9E4C-41A0-B7A1-63138D66F75D/A/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3819E4EE-5F01-49B7-95B7-A2B077D7F830/8/ComponentBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3819E4EE-5F01-49B7-95B7-A2B077D7F830/46/ComponentState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/22F10D1A-90B9-4317-8225-FA21FB51B8B7/12/EventCallbackWorkItem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/chess/Assets/BoardGenerator.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Article.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/Browse.razor" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/Admin.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Shared/LoginDisplay.razor" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/Admin.razor" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/AddArticle.razor" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/MenuButton.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Menu.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/MenuService.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/EditUi.razor" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Page.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/AddPage.razor" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/EditPage.razor" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/ViewPage.razor" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Shared/NavMenu.razor" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/PagesService.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/FavoriteArticles.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/UsersService.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/ArticleId.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/ArticleService.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/Articles.razor" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/FavoriteArticles.razor" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/GalleryService.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/RoleConfiguration.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/wwwroot/css/site.css" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Services/GalleryService.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Models/GalleryModels.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Models/Article.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/EditArticle.razor" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/ArticleView.razor" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/AlbumDetail.razor" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Models/Email.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Models/MailModel.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/Email/Email.cshtml" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/ViewRenderService.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Startup.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Models/Database.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Ignore.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/MetaHelper.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Views/Email/Email.cshtml" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/Login.razor" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Models/MetaModel.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/Detail.cshtml" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/_Host.cshtml" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/MetaHelper.razor" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/Newsletter.cshtml" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/ApplicationDbContext.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Services/ArticleService.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Pages/Newsletter.razor" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Services/UsersService.cs" />
-        <option value="$PROJECT_DIR$/RedakcniSystem/Data/Controllers/EmailController.cs" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/RedakcniSystem/Pages/MetaHelper.razor" />
+      <option value="$PROJECT_DIR$/RedakcniSystem/Data/Controllers/ArticleController.cs" />
+      <option value="$PROJECT_DIR$/RedakcniSystem/Startup.cs" />
+      <option value="$PROJECT_DIR$/RedakcniSystem/Data/Controllers/EmailController.cs" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1nG3gDJx1W21KKvYZutZnOBNU3Q" />
   <component name="ProjectLevelVcsManager">
@@ -205,6 +156,8 @@
       <workItem from="1617647107743" duration="5708000" />
       <workItem from="1617653577828" duration="2006000" />
       <workItem from="1617698310481" duration="5587000" />
+      <workItem from="1617981064063" duration="1563000" />
+      <workItem from="1617982668706" duration="1850000" />
     </task>
     <servers />
   </component>
@@ -228,167 +181,9 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="552" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611046896812">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="552" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1611046896812" />
-    <state width="976" height="618" key="DebuggerActiveHint" timestamp="1617703261075">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="976" height="618" key="DebuggerActiveHint/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617703261075" />
-    <state width="1112" height="618" key="DebuggerActiveHint/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617655028135" />
-    <state width="2517" height="159" key="GridCell.Tab.0.bottom" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.0.bottom/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="31" key="GridCell.Tab.0.bottom/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703919152" />
-    <state width="2517" height="159" key="GridCell.Tab.0.center" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.0.center/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="31" key="GridCell.Tab.0.center/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703919151" />
-    <state width="2517" height="159" key="GridCell.Tab.0.left" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.0.left/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="31" key="GridCell.Tab.0.left/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703919151" />
-    <state width="2517" height="159" key="GridCell.Tab.0.right" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.0.right/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="31" key="GridCell.Tab.0.right/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703919151" />
-    <state width="2517" height="159" key="GridCell.Tab.1.bottom" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.1.bottom/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="159" key="GridCell.Tab.1.bottom/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703357826" />
-    <state width="2517" height="159" key="GridCell.Tab.1.center" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.1.center/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="159" key="GridCell.Tab.1.center/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703357826" />
-    <state width="2517" height="159" key="GridCell.Tab.1.left" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.1.left/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="159" key="GridCell.Tab.1.left/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703357826" />
-    <state width="2517" height="159" key="GridCell.Tab.1.right" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.1.right/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="159" key="GridCell.Tab.1.right/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703357826" />
-    <state width="2517" height="159" key="GridCell.Tab.2.bottom" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.2.bottom/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="159" key="GridCell.Tab.2.bottom/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703357826" />
-    <state width="2517" height="159" key="GridCell.Tab.2.center" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.2.center/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="159" key="GridCell.Tab.2.center/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703357826" />
-    <state width="2517" height="159" key="GridCell.Tab.2.left" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.2.left/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="159" key="GridCell.Tab.2.left/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703357826" />
-    <state width="2517" height="159" key="GridCell.Tab.2.right" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.2.right/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="159" key="GridCell.Tab.2.right/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703357826" />
-    <state width="2517" height="159" key="GridCell.Tab.3.bottom" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.3.bottom/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="159" key="GridCell.Tab.3.bottom/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703357826" />
-    <state width="2517" height="159" key="GridCell.Tab.3.center" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.3.center/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="159" key="GridCell.Tab.3.center/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703357826" />
-    <state width="2517" height="159" key="GridCell.Tab.3.left" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.3.left/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="159" key="GridCell.Tab.3.left/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703357826" />
-    <state width="2517" height="159" key="GridCell.Tab.3.right" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.3.right/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="159" key="GridCell.Tab.3.right/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703357826" />
-    <state width="2517" height="159" key="GridCell.Tab.4.bottom" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.4.bottom/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="159" key="GridCell.Tab.4.bottom/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703357826" />
-    <state width="2517" height="159" key="GridCell.Tab.4.center" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.4.center/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="159" key="GridCell.Tab.4.center/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703357826" />
-    <state width="2517" height="159" key="GridCell.Tab.4.left" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.4.left/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="159" key="GridCell.Tab.4.left/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703357826" />
-    <state width="2517" height="159" key="GridCell.Tab.4.right" timestamp="1617704061764">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state width="2517" height="159" key="GridCell.Tab.4.right/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617704061764" />
-    <state width="1877" height="159" key="GridCell.Tab.4.right/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617703357826" />
-    <state x="552" y="257" key="Rider.ProjectTemplateDialog.Size" timestamp="1611038913450">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="552" y="257" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1611038913450" />
-    <state x="461" y="170" key="SettingsEditor" timestamp="1617648809354">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="461" y="170" key="SettingsEditor/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617648809354" />
-    <state x="92" y="92" width="1736" height="866" key="VCS.FileHistoryDialog" timestamp="1617655583215">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="92" y="92" width="1736" height="866" key="VCS.FileHistoryDialog/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1617655583215" />
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1611661323147">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1611661323147" />
-    <state x="-1463" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611052064487">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state x="-1463" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1611052064487" />
-    <state x="-1601" y="100" width="642" height="849" key="find.popup" timestamp="1611037842415">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state x="-1601" y="100" width="642" height="849" key="find.popup/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1611037842415" />
-    <state x="616" y="243" key="run.anything.popup" timestamp="1612860196386">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1612860196386" />
-    <state x="-1617" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1617650352923">
-      <screen x="-2560" y="0" width="2560" height="1050" />
-    </state>
-    <state x="-1617" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-2560.0.2560.1050@-2560.0.2560.1050" timestamp="1617650352923" />
-    <state x="707" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-2560.0.2560.1050@0.0.1920.1050" timestamp="1611662033874" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/RedakcniSystem/Pages/MetaHelper.razor</url>
-          <line>23</line>
-          <properties documentPath="C:\dev\RedakcniSystem\RedakcniSystem\Pages\MetaHelper.razor" initialLine="23" isMultiMethodBreakpoint="true">
-            <option name="multiMethodBreakpoint" value="true" />
-            <startOffsets>
-              <option value="-1" />
-            </startOffsets>
-            <endOffsets>
-              <option value="-1" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/RedakcniSystem/Data/Services/UsersService.cs</url>
           <line>57</line>
